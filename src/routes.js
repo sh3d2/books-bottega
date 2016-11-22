@@ -21,9 +21,6 @@ module.exports = function (stockRepository) {
                 then(function (result) {
                     if (result) {
                         res.format({
-                            text: function () {
-                                res.send(result);
-                            },
                             html: function () {
                                 res.send('<p> count is: ' + result +'</p>');
                             },
