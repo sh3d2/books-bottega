@@ -1,5 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/bookinventory';
+var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/bookinventory';
 
 var collectionPromise = MongoClient
     .connect(url, {db: {bufferMaxEntries: 0}})
